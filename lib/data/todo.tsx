@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs";
+import fs, { writeFileSync } from "fs";
 import { TodoType } from "../../types/todo";
 
 const getList = () => {
@@ -17,4 +17,8 @@ const exist = ({ id }: { id: number }) => {
 	const todo = todos.some((todo) => todo.id === id);
 	return todo;
 };
-export default { getList, exist };
+
+const write = async (todos: TodoType[]) => {
+	writeFileSync("data/todos.json", JSON.stringify(todos));
+};
+export default { getList, exist, write };

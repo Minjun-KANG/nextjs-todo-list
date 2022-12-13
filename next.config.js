@@ -8,4 +8,17 @@ module.exports = {
 
 		return config;
 	},
+	module: {
+		loaders: [
+			// Not talking about this
+			{
+				test: /\.css$/,
+				loaders: ["style", "css"], // !!!! Expects array
+			},
+			{
+				test: /\.tsx?$/,
+				loader: "ts-loader", // !!!! Expects single string
+			},
+		],
+	},
 };

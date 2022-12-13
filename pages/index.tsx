@@ -3,7 +3,6 @@ import { GetServerSideProps, NextPage } from "next";
 import TodoList from "../components/TodoList";
 import { TodoType } from "../types/todo";
 import { getTodosApi } from "../lib/api/todo";
-import todos from "./api/todos";
 
 interface IProps {
 	todos: TodoType[];
