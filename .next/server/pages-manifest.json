@@ -1,8 +1,10 @@
 {
   "/_app": "pages/_app.js",
+  "/api/todos/[id]": "pages/api/todos/[id].js",
+  "/api/todos": "pages/api/todos.js",
+  "/todo/add": "pages/todo/add.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/todo/add": "pages/todo/add.js",
-  "/api/todos": "pages/api/todos.js"
+  "/404": "pages/404.html"
 }
